@@ -1,0 +1,9 @@
+$bg-color:#CC3388;
+body {
+    background: $bg-color;
+}
+
+.card {
+    transform: rotate(120deg);
+    filter: blur(3px);
+}
