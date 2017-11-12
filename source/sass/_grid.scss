@@ -1,0 +1,59 @@
+@mixin pc {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin pad2 {
+    @media (max-width: 736px) {
+        @content;
+    }
+}
+
+@mixin pad3 {
+    @media (max-width: 680px) {
+        @content;
+    }
+}
+
+@mixin pad5 {
+    @media (max-width: 587px) {
+        @content;
+    }
+}
+
+@mixin pad6 {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: 440px) {
+        @content;
+    }
+}
+
+@mixin phone2 {
+    @media (max-width: 478px) {
+        @content;
+    }
+}
+
+@mixin iphone6 {
+    @media (max-width: 414px) {
+        @content;
+    }
+}
+
+@mixin iphone5 {
+    @media (max-width: 320px) {
+        @content;
+    }
+}

@@ -1,0 +1,245 @@
+.wrap {
+    margin: 0 auto;
+}
+
+.header {
+    background: url('../img/header_desktop.png') center right no-repeat;
+    background-size: cover;
+    height: 420px;
+    padding-top: 0;
+    .round1 {
+        background: #000;
+        width: 500px;
+        height: 500px;
+        float: right;
+    }
+    .nav {
+        float: right;
+        font-size: $font-size;
+        color: $text-color-1;
+        li {
+            float: left;
+            padding: 2px 15px 3px 15px;
+            margin: 18px 0 17px 0;
+            a:hover,
+            a:active {
+                color: rgba(111, 111, 111, 0.5);
+            }
+        }
+    }
+    .logo {
+        width: 50%;
+        float: left;
+        margin: 300px auto;
+        text-align: center;
+    }
+    .bars {
+        display: none;
+    }
+}
+
+@include iphone6 {
+    .header {
+        background: url('../img/header_mobile.png') center right no-repeat;
+        .headerbar {
+            position: fixed;
+            width: 100%;
+            z-index: 5;
+            .container {
+                .bars {
+                    float: right;
+                    display: block;
+                    color: $text-color-1;
+                    clear: right;
+                    padding: 16px 0;
+                }
+                .nav {
+                    max-height: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    z-index: 100;
+                    top: 56px;
+                    left: 0;
+                    right: 0;
+                    background: rgba(0, 0, 0, 0.9);
+                    transition: max-height 1s;
+                }
+                li {
+                    float: none;
+                    text-align: center;
+                    padding: 0;
+                    margin: 0;
+                    border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+                    a {
+                        display: block;
+                        padding: 10px 15px 10px 15px;
+                    }
+                    a:hover {
+                        background-color: rgba(111, 111, 111, 0.5);
+                        color: $text-color-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header {
+    .title {
+        position: relative;
+        background: rgba(0, 0, 0, 0.35);
+        max-width: 460px;
+        max-height: 152px;
+        top: 150px;
+        margin: 0px auto 145px;
+        padding: 20px 0;
+        h1 {
+            max-width: 396px;
+            max-height: 48px;
+            margin: 0 auto 16px;
+        }
+        p {
+            text-align: center;
+            i {
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+@include iphone6 {
+    .header {
+        .title {
+            position: relative;
+            margin: 0 auto;
+            top: 123px;
+            text-align: center;
+            padding-bottom: 10%;
+            width: 90%;
+            h1 {
+                max-width: 100%;
+                max-height: 100%;
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@include iphone6 {
+    body.navshow {
+        .header {
+            .headerbar {
+                .container {
+                    .nav {
+                        max-height: 500px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    clear: both;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: left;
+    h3,
+    ul {
+        text-align: left;
+    }
+    .ftbox {
+        float: left;
+        width: 31.3%;
+        margin: 5px 1% 20px;
+        box-sizing: border-box;
+    }
+    .about {
+        display: block;
+        text-align: left;
+    }
+    h3 {
+        margin: 30px 0 16px;
+    }
+    li {
+        line-height: $line-height+ 0.1;
+    }
+    p {
+        font-size: $font-size;
+        color: #000;
+        line-height: $line-height;
+    }
+    .community {
+        max-width: 245px;
+        float: right;
+        margin-top: 42px;
+        .logof {
+            background: $logo-bg-png;
+            background: $logo-bg-svg;
+            background-size: contain;
+            height: 49px;
+            width: 245px;
+            float: right;
+        }
+        a.btn {
+            width: 31px;
+            height: 31px;
+            font-size: $font-size+20;
+            margin: 22px 6px;
+        }
+        .google {
+            color: #DB4437;
+        }
+        .twitter {
+            color: #41ABE1;
+        }
+        .fb {
+            color: #3A5795;
+        }
+    }
+}
+
+@include pad3 {
+    footer {
+        .about {
+            display: none;
+            h3 {
+                margin: 20px 0 16px;
+            }
+            .contact {
+                width: 48%;
+            }
+            .community {
+                width: 48%;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@include phone2 {
+    footer {
+        padding: 0;
+        text-align: center;
+        h3,
+        ul {
+            text-align: center;
+        }
+        .contact {
+            width: 98%;
+        }
+        .community {
+            width: 98%;
+            max-width: none;
+            float: left;
+            margin-top: 0;
+        }
+        .logof {
+            float: none;
+            margin: 0 auto 10px;
+        }
+    }
+}

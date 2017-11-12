@@ -121,6 +121,11 @@ gulp.task('watch', function() {
     gulp.watch('./source/js/**/*.js', ['babel'])
 });
 
+gulp.task('deploy', function() {
+    return gulp.src('./public/**/*')
+        .pipe($.ghPages());
+});
+
 gulp.task('build', gulpSequence(['clean', 'jade', 'sass', 'babel', 'vendorsjs', 'image-min']))
 
 gulp.task('default', ['jade', 'sass', 'babel', 'vendorsjs', 'browser-sync', 'watch']);

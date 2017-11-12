@@ -1,9 +1,18 @@
-$bg-color:#CC3388;
-body {
-    background: $bg-color;
-}
-
-.card {
-    transform: rotate(120deg);
-    filter: blur(3px);
-}
+@import 'mixin';
+@import 'reset';
+@import 'grid';
+@import 'layout';
+@import 'module';
+// @import pages/index;
+// @import pages/login;
+// @import pages/register;
+// @import pages/store;
+// $bg-color:#CC3388;
+// body {
+//     background: $bg-color;
+// }
+// .card {
+//     // filter: blur(3px);
+//     background: #cccc11;
+//     transform: rotate(120deg);
+// }
