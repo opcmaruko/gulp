@@ -8,15 +8,21 @@
     height: 420px;
     padding-top: 0;
     .round1 {
-        background: #000;
-        width: 500px;
-        height: 500px;
+        position: absolute;
         float: right;
+        top: -350px;
+        right: -200px;
+        height: 1000px;
+        width: 1000px;
+        background-color: $bg-color-2;
+        border-radius: 1000px;
     }
     .nav {
+        position: relative;
         float: right;
         font-size: $font-size;
         color: $text-color-1;
+        text-align: center;
         li {
             float: left;
             padding: 2px 15px 3px 15px;
@@ -28,14 +34,175 @@
         }
     }
     .logo {
-        width: 50%;
+        position: relative;
+        top: 350px;
+        left: 140px;
+        text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.16);
+    }
+    .dragon {
+        position: relative;
+        float: right;
+        right: 0px;
+        height: 686px;
+        width: 654px;
+        background: url('../images/jaydragon.png');
+    }
+    .slide {
+        margin: 0 auto;
+        clear: both;
+        height: 29px;
+        width: 81px;
+        img {
+            transition: all 0.1s;
+        }
+        img:hover {
+            position: relative;
+            top: 10px;
+        }
+    }
+}
+
+.bgbox1 {
+    position: absolute;
+    top: 850px;
+    left: -100px;
+    height: 700px;
+    width: 700px;
+    background-color: $bg-color-2;
+    transform: rotate(45deg);
+}
+
+.bgbox2 {
+    position: absolute;
+    top: 1050px;
+    right: -80px;
+    height: 1000px;
+    width: 1000px;
+    background-color: #ffcc33;
+    transform: rotate(45deg);
+}
+
+.sline {
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+    clear: both;
+    height: 1164px;
+    width: 7px;
+    background: #cc9966;
+}
+
+.hline {
+    position: relative;
+    margin: 0 auto;
+    height: 3px;
+    width: 130px;
+    background: #cc9966;
+}
+
+.hline1 {
+    top: -820px;
+}
+
+.hline4 {
+    top: -1010px;
+}
+
+.hline2,
+.hline3 {
+    top: -920px;
+}
+
+.hline1,
+.hline3 {
+    left: -65px;
+}
+
+.card {
+    height: 250px;
+    width: 500px;
+    padding: 15px;
+    img {
+        height: 220px;
+    }
+    h2 {
+        width: 250px;
+        margin: 0 15px 0;
+        padding: 10px 0 0 0;
+    }
+    ul {
+        width: 200px;
+        margin: 15px;
+    }
+}
+
+.service1 {
+    top: -970px;
+}
+
+.service4 {
+    top: -1160px;
+}
+
+.service2,
+.service3 {
+    top: -1070px;
+}
+
+.service1,
+.service3 {
+    position: relative;
+    margin: 0 auto;
+    left: -380px;
+    img {
+        float: right;
+    }
+    h2,
+    ul {
+        float: right;
+        text-align: right;
+    }
+}
+
+.hline2,
+.hline4 {
+    left: 65px;
+}
+
+.service2,
+.service4 {
+    position: relative;
+    margin: 0 auto;
+    left: 380px;
+    img {
         float: left;
-        margin: 300px auto;
-        text-align: center;
     }
-    .bars {
-        display: none;
+    h2,
+    ul {
+        float: left;
+        text-align: left;
     }
+}
+
+.round2 {
+    position: relative;
+    margin: 0 auto;
+    top: -1100px;
+    height: 413px;
+    width: 413px;
+    background-color: $bg-color-2;
+    border-radius: 1000px;
+    z-index: 5;
+}
+
+.bgbox3 {
+    position: absolute;
+    left: 70px;
+    top: 2100px;
+    height: 1280px;
+    width: 1280px;
+    background-color: $text-color-2;
+    transform: rotate(45deg);
 }
 
 @include iphone6 {
@@ -78,49 +245,6 @@
                         background-color: rgba(111, 111, 111, 0.5);
                         color: $text-color-1;
                     }
-                }
-            }
-        }
-    }
-}
-
-.header {
-    .title {
-        position: relative;
-        background: rgba(0, 0, 0, 0.35);
-        max-width: 460px;
-        max-height: 152px;
-        top: 150px;
-        margin: 0px auto 145px;
-        padding: 20px 0;
-        h1 {
-            max-width: 396px;
-            max-height: 48px;
-            margin: 0 auto 16px;
-        }
-        p {
-            text-align: center;
-            i {
-                padding: 0 5px;
-            }
-        }
-    }
-}
-
-@include iphone6 {
-    .header {
-        .title {
-            position: relative;
-            margin: 0 auto;
-            top: 123px;
-            text-align: center;
-            padding-bottom: 10%;
-            width: 90%;
-            h1 {
-                max-width: 100%;
-                max-height: 100%;
-                span {
-                    display: block;
                 }
             }
         }

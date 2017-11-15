@@ -104,6 +104,7 @@ section {
 body {
     line-height: 1;
     position: relative;
+    overflow-x: hidden;
 }
 
 ol,
@@ -132,7 +133,7 @@ table {
 html,
 body {
     height: 100%;
-    background: $bg-color-3;
+    background: $bg-color-1;
 }
 
 img {
