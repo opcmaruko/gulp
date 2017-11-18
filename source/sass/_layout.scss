@@ -1,12 +1,4 @@
-.wrap {
-    margin: 0 auto;
-}
-
 .header {
-    background: url('../img/header_desktop.png') center right no-repeat;
-    background-size: cover;
-    height: 420px;
-    padding-top: 0;
     .round1 {
         position: absolute;
         float: right;
@@ -18,11 +10,15 @@
         border-radius: 1000px;
     }
     .nav {
-        position: relative;
-        float: right;
+        position: fixed;
+        z-index: 120;
+        width: 100%;
         font-size: $font-size;
         color: $text-color-1;
         text-align: center;
+        ul {
+            float: right;
+        }
         li {
             float: left;
             padding: 2px 15px 3px 15px;
@@ -34,14 +30,15 @@
         }
     }
     .logo {
-        position: relative;
+        position: absolute;
         top: 350px;
         left: 140px;
         text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.16);
     }
     .dragon {
-        position: relative;
+        position: absolute;
         float: right;
+        top: 30px;
         right: 0px;
         height: 686px;
         width: 654px;
@@ -50,6 +47,8 @@
     .slide {
         margin: 0 auto;
         clear: both;
+        position: relative;
+        top: 700px;
         height: 29px;
         width: 81px;
         img {
@@ -84,7 +83,7 @@
 
 .sline {
     position: relative;
-    top: 100px;
+    top: 800px;
     margin: 0 auto;
     clear: both;
     height: 1164px;
@@ -101,16 +100,16 @@
 }
 
 .hline1 {
-    top: -820px;
+    top: -200px;
 }
 
 .hline4 {
-    top: -1010px;
+    top: -400px;
 }
 
 .hline2,
 .hline3 {
-    top: -920px;
+    top: -300px;
 }
 
 .hline1,
@@ -137,16 +136,16 @@
 }
 
 .service1 {
-    top: -970px;
+    top: -320px;
 }
 
 .service4 {
-    top: -1160px;
+    top: -550px;
 }
 
 .service2,
 .service3 {
-    top: -1070px;
+    top: -450px;
 }
 
 .service1,
@@ -184,17 +183,6 @@
     }
 }
 
-.round2 {
-    position: relative;
-    margin: 0 auto;
-    top: -1100px;
-    height: 413px;
-    width: 413px;
-    background-color: $bg-color-2;
-    border-radius: 1000px;
-    z-index: 5;
-}
-
 .bgbox3 {
     position: absolute;
     left: 70px;
@@ -203,6 +191,96 @@
     width: 1280px;
     background-color: $text-color-2;
     transform: rotate(45deg);
+}
+
+.about {
+    position: absolute;
+    top: 2000px;
+    .dragon2 {
+        float: left;
+        height: 490px;
+        width: 685px;
+        background: url('../images/red.png');
+    }
+    .text {
+        float: left;
+        width: 30%;
+        padding: 20px;
+        margin: 200px auto;
+        h1 {
+            padding: 20px 0;
+        }
+    }
+}
+
+.case {
+    position: absolute;
+    top: 2600px;
+    clear: both;
+    width: 100%;
+}
+
+.poto {
+    float: left;
+    position: relative;
+    z-index: 55;
+    width: 12.5%;
+    transition: transform .3s .3s, z-index .5s step-end;
+    &:hover {
+        position: relative;
+        z-index: 100;
+        transform: scale(2);
+        transition: transform .2s, z-index .3s step-start;
+    }
+}
+
+.connection {
+    clear: both;
+    margin: 0 auto;
+    position: relative;
+    top: 1000px;
+    h1 {
+        text-align: center;
+        padding: 10px;
+        margin: 0 0 30px 0;
+    }
+    h4 {
+        padding: 10px;
+    }
+    .form1 {
+        text-align: right;
+        float: left;
+        width: 45%;
+        margin: 0 2.5%;
+    }
+    .form2 {
+        float: left;
+        width: 45%;
+        margin: 0 2.5% 20px;
+    }
+    .btng {
+        clear: both;
+        padding: 20px 42%;
+    }
+}
+
+.footer {
+    background: $bg-color-2;
+    margin: 50px auto 0;
+    position: relative;
+    bottom: -1000px;
+    .container {
+        padding: 40px;
+        .context {
+            float: left;
+        }
+        .flogo {
+            float: right;
+        }
+        p {
+            clear: both;
+        }
+    }
 }
 
 @include iphone6 {
